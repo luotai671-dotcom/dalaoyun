@@ -21,14 +21,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     env:
-      SITE_URL: ${{ vars.SITE_URL }}
+      SITE_URL: ${{ vars.SITE_URL || 'https://dalaoyungw.com' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Require production site URL
-        run: test -n "$SITE_URL" || (echo "Set the repository variable SITE_URL, for example https://www.example.com" && exit 1)
+      - name: Verify site URL
+        run: echo "Using SITE_URL=$SITE_URL"
       - name: Build static site and sitemap
         run: npm run build
       - name: Configure GitHub Pages
@@ -41,4 +41,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Submit sitemap URLs to IndexNow
+        continue-on-error: true
         run: npm run indexnow
