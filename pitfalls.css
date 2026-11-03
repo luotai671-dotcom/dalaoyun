@@ -1,0 +1,80 @@
+.pitfalls-hero{background:radial-gradient(circle at 78% 35%,rgba(255,198,46,.13),transparent 34%)}
+.pitfall-stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);background:#0e141a}
+.pitfall-stats div{padding:22px;border-right:1px solid var(--line)}
+.pitfall-stats div:nth-child(3){border:0}
+.pitfall-stats strong{display:block;color:var(--amber);font:800 29px monospace}
+.pitfall-stats span{color:#78848d;font-size:10px}
+.pitfall-stats p{grid-column:1/-1;margin:0;padding:11px 20px;border-top:1px solid var(--line);color:var(--green);font-size:10px}
+.pitfall-stats i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:6px}
+.pitfalls-answer{padding:34px 0;background:var(--amber);color:#0b0e12}
+.pitfalls-answer .direct-answer{display:grid;grid-template-columns:80px 1fr;gap:26px}
+.pitfalls-answer .direct-mark{display:grid;place-items:center;width:66px;height:66px;border:2px solid #111;font:900 30px monospace}
+.pitfalls-answer .kicker{color:#66500b}
+.pitfalls-answer h2{margin:2px 0 7px}
+.pitfalls-answer p:last-child{margin:0;line-height:1.8}
+.pitfalls-toolbar{position:sticky;top:72px;z-index:10;background:rgba(8,11,15,.96);padding:18px 0 12px;backdrop-filter:blur(14px)}
+.pitfall-search{display:grid;grid-template-columns:auto 1fr auto;align-items:center;border:1px solid var(--line);background:#0e141a}
+.pitfall-search label{padding:0 16px;color:#76838c;font:9px monospace}
+.pitfall-search input{height:48px;border:0;border-left:1px solid var(--line);border-right:1px solid var(--line);background:#090d11;color:#e5e9eb;padding:0 15px;outline:none}
+.pitfall-search input:focus{box-shadow:inset 0 0 0 1px var(--amber)}
+.pitfall-search span{padding:0 16px;color:var(--amber);font:10px monospace;white-space:nowrap}
+.pitfall-tabs{display:grid;grid-template-columns:repeat(6,1fr);margin-top:10px;border:1px solid var(--line);overflow:auto}
+.pitfall-tabs button{min-width:135px;border:0;border-right:1px solid var(--line);background:#10161c;color:#89949d;padding:12px 7px;font-size:10px;cursor:pointer}
+.pitfall-tabs button:last-child{border:0}
+.pitfall-tabs button.active{background:var(--amber);color:#111;font-weight:800}
+.pitfall-tabs small{font:8px monospace}
+.pitfall-list{margin-top:20px}
+.pitfall-item{border:1px solid var(--line);border-bottom:0;background:rgba(14,19,25,.82)}
+.pitfall-item:last-child{border-bottom:1px solid var(--line)}
+.pitfall-item[hidden]{display:none}
+.pitfall-item summary{display:grid;grid-template-columns:55px 1fr 25px;gap:18px;align-items:center;padding:22px;cursor:pointer;list-style:none}
+.pitfall-item summary::-webkit-details-marker{display:none}
+.pitfall-item summary>span{color:#44515b;font:800 20px monospace}
+.pitfall-item summary small{color:var(--amber);font:8px monospace}
+.pitfall-item summary h2{font-size:16px;margin:5px 0 0;line-height:1.5}
+.pitfall-item summary>i{position:relative;width:16px;height:16px}
+.pitfall-item summary>i::before,.pitfall-item summary>i::after{content:"";position:absolute;left:0;top:8px;width:15px;height:1px;background:var(--amber)}
+.pitfall-item summary>i::after{transform:rotate(90deg);transition:.2s}
+.pitfall-item[open] summary>i::after{transform:rotate(0)}
+.pitfall-item[open]{border-color:#4b5660;background:#111820}
+.pitfall-answer{padding:0 55px 24px 95px}
+.pitfall-answer p{margin:0;color:#a8b2ba;font-size:13px;line-height:1.95}
+.answer-actions{display:flex;gap:18px;margin-top:16px}
+.answer-actions a,.answer-actions button{border:0;background:none;color:var(--amber);padding:0;font-size:10px;cursor:pointer}
+.no-results{text-align:center;padding:70px;border:1px solid var(--line);color:#8c98a1}
+.no-results strong{color:#fff}
+@media(max-width:900px){.pitfall-tabs{grid-template-columns:repeat(3,1fr)}
+.pitfall-search{grid-template-columns:1fr}
+.pitfall-search label,.pitfall-search span{padding:9px 13px}
+.pitfall-search input{border:1px solid var(--line)}
+}
+@media(max-width:650px){.pitfall-stats,.pitfalls-answer .direct-answer{grid-template-columns:1fr}
+.pitfall-stats div{border-right:0;border-bottom:1px solid var(--line)}
+.pitfall-tabs{display:flex}
+.pitfall-item summary{grid-template-columns:42px 1fr 18px;padding:17px 13px;gap:9px}
+.pitfall-item summary h2{font-size:14px}
+.pitfall-answer{padding:0 18px 20px 64px}
+.pitfalls-toolbar{top:64px}
+}
+
+/* Improve contrast and legibility in the sticky FAQ controls. */
+.pitfalls-toolbar{background:rgba(8,11,15,.98);padding-bottom:14px}
+.pitfall-search{min-height:56px;border-color:#36414c;background:#111820}
+.pitfall-search label{padding:0 18px;color:#c4cdd4;font:600 12px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap}
+.pitfall-search input{height:54px;border-color:#36414c;color:#f3f6f8;padding:0 18px;font-size:14px}
+.pitfall-search input::placeholder{color:#7f8b95;opacity:1}
+.pitfall-search span{padding:0 18px;color:#ffd45f;font:700 12px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace}
+.pitfall-tabs{grid-template-columns:repeat(7,minmax(0,1fr));border-color:#36414c;overflow:visible}
+.pitfall-tabs button{min-width:0;min-height:52px;border-color:#36414c;color:#c1cad1;padding:12px 9px;font-size:12px;font-weight:600;line-height:1.45}
+.pitfall-tabs button:hover{background:#17202a;color:#fff}
+.pitfall-tabs button.active:hover{background:var(--amber);color:#111}
+.pitfall-tabs small{font:700 10px/1 ui-monospace,SFMono-Regular,Consolas,monospace;color:inherit}
+.pitfall-tabs button[data-category="大佬云服务与使用"]{position:relative;background:#102130;color:#8dceff;border-color:#3477a7;box-shadow:inset 0 3px 0 var(--blue);font-weight:800}
+.pitfall-tabs button[data-category="大佬云服务与使用"]::before{content:"品牌专区";display:inline-block;margin-right:7px;padding:2px 5px;background:var(--blue);color:#07111a;font:800 9px/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;vertical-align:1px}
+.pitfall-tabs button[data-category="大佬云服务与使用"]:hover{background:#173149;color:#fff}
+.pitfall-tabs button[data-category="大佬云服务与使用"].active{background:var(--blue);color:#07111a;box-shadow:inset 0 3px 0 #a9dbff}
+.pitfall-tabs button[data-category="大佬云服务与使用"].active::before{background:#07111a;color:#a9dbff}
+@media(max-width:900px){.pitfall-tabs{grid-template-columns:repeat(3,1fr)}.pitfall-search label,.pitfall-search span{padding:11px 14px}}
+@media(max-width:650px){.pitfall-tabs{display:flex;overflow-x:auto}.pitfall-tabs button{min-width:165px}.pitfall-search label,.pitfall-search span{font-size:11px}}
+
+

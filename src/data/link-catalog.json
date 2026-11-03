@@ -1,0 +1,29 @@
+{
+  "affiliates": [
+    {"id":"shandianshu","name":"闪电鼠","url":"https://chenpin.shandianshuaff.com/#/?code=m28TvPVX"},
+    {"id":"dalao","name":"大佬云","url":"https://chenpin01.dalaoyunaff.com/#/?code=GQ6CL6Km"},
+    {"id":"liulianyun","name":"榴莲云","url":"https://chenpingan.liulianyunaff.com/#/?code=7pdjs9zt"},
+    {"id":"shenxing","name":"神行加速","url":"https://chenpingan01.shenxingaff.com/#/?code=RZ48f9wP"},
+    {"id":"yunjiexian","name":"云界线","url":"https://chenpingan.yunjiexianaff.com/#/?code=xLJGaIHM"},
+    {"id":"huanqiuti","name":"环球梯","url":"https://chenpingan01.huanqiutiaff.com/#/?code=FGCcYdFo"},
+    {"id":"jilianyun","name":"极连云","url":"https://haozevpn.jlyvipaff.com/#/?code=6h2TMD5b"},
+    {"id":"guangnianti","name":"光年梯","url":"https://gnt001.gntvipaff.cc/#/?code=rN3ybxa7"},
+    {"id":"edgenova","name":"边缘节点","url":"https://wep.edgenovaaff.com/#/?code=papME7sh"},
+    {"id":"sujie","name":"速界","url":"https://pygllc.speedworldaff.cc/#/?code=ll8LjYBJ"},
+    {"id":"kuaili","name":"快狸","url":"https://fanxiaobin.kuailiaff.com/#/?code=sOX6N4Tp"},
+    {"id":"kexinyun","name":"可信云","url":"https://everett7623.kosingaff.com/#/?code=Jl6dWU0G"},
+    {"id":"shunyun","name":"瞬云","url":"https://ddd.jichang.best/#/register?code=weN73kGq"},
+    {"id":"yuntu","name":"云图","url":"https://super.ytjcok.org/#/register?code=BKvuyYJI"},
+    {"id":"kunpeng","name":"鲲鹏加速","url":"https://kunpengjiasu.com/#/register?code=oBWoiCcv"}
+  ],
+  "clients": [
+    {"id":"clash-verge","name":"Clash Verge Rev","platform":"Windows / macOS / Linux","url":"https://github.com/clash-verge-rev/clash-verge-rev/releases"},
+    {"id":"sing-box","name":"sing-box","platform":"Windows / macOS / Linux / Android","url":"https://github.com/SagerNet/sing-box/releases"},
+    {"id":"v2rayn","name":"v2rayN","platform":"Windows / Linux","url":"https://github.com/2dust/v2rayN/releases"},
+    {"id":"v2rayng","name":"v2rayNG","platform":"Android","url":"https://github.com/2dust/v2rayNG/releases"},
+    {"id":"flclash","name":"FlClash","platform":"Android / Windows / macOS","url":"https://github.com/chen08209/FlClash/releases"},
+    {"id":"cmfa","name":"Clash Meta for Android","platform":"Android","url":"https://github.com/chen08209/FlClash/releases","fallback":"flclash"},
+    {"id":"shadowrocket","name":"Shadowrocket（需外区 Apple ID）","platform":"iOS / Apple TV","url":"https://apps.apple.com/app/shadowrocket/id932747118"},
+    {"id":"stash","name":"Stash","platform":"iOS","url":"https://apps.apple.com/app/stash-rule-based-proxy/id1596063349"}
+  ]
+}

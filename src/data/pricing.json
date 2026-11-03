@@ -1,0 +1,13 @@
+{
+  "currency":"CNY","coupon":{"code":"dly88","scope":"全场周期套餐"},
+  "plans":[
+    {"id":"annual-special","name":"年付活动包","badge":"限时特惠","billing":"yearly","prices":{"year":96},"monthlyEquivalent":8,"traffic":"每月 60GB","features":["全节点 1 倍率","晚高峰不限速","全节点解锁","高效客服响应"]},
+    {"id":"fuyun","name":"福云 · 限时版","billing":"subscription","prices":{"month":15,"quarter":45,"year":180},"traffic":"每月 50GB","features":["日均低至 ¥0.5","全节点 1 倍率","晚高峰智能调度","解锁 ChatGPT / Claude / Netflix"]},
+    {"id":"caiyun","name":"财云 · 福利版","badge":"热门主推","billing":"subscription","prices":{"month":19.99,"quarter":59.97,"year":239.88},"traffic":"每月 100GB","features":["每天不到 ¥0.65","99.9% 高可用 SLA","原生住宅出口支持","适合科研与办公"]},
+    {"id":"chuyun","name":"初云 · 进阶版","billing":"subscription","prices":{"month":25,"quarter":75,"year":300},"traffic":"每月 150GB","features":["每天不到 ¥0.84","IEPL 专线直连","全节点 1 倍率","满足高频出海与 4K 影音"]},
+    {"id":"lingyun","name":"凌云 · 基础版","billing":"subscription","prices":{"month":43,"quarter":129,"year":516},"traffic":"每月 300GB","features":["每天约 ¥1.43","万兆互联全覆盖","多设备高并发","大流量畅享"]},
+    {"id":"yuyun","name":"御云 · 高级版","badge":"旗舰大流量","billing":"subscription","prices":{"month":73,"quarter":219,"year":876},"traffic":"每月 600GB","features":["单节点峰值 2.5Gbps","团队与工作室首选","全平台解锁","极速优先调度"]},
+    {"id":"xianyun","name":"闲云 · 随心包","billing":"lifetime","prices":{"once":268},"traffic":"200GB 不限时","features":["终身有效，用完为止","无续费月租","适合低频备用","支持突发大文件下载"]},
+    {"id":"youyun","name":"悠云 · 长享包","billing":"lifetime","prices":{"once":498},"traffic":"500GB 不限时","features":["终身有效，用完为止","原生双 ISP 住宅出口","多端协同","大容量一次付费"]}
+  ]
+}
