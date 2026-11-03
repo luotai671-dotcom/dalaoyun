@@ -1,3 +1,94 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow, noarchive, nosnippet"><meta name="referrer" content="no-referrer"><title>正在安全跳转｜大佬云</title><style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#080b0f;color:#eef2f4;font-family:system-ui,"Microsoft YaHei",sans-serif}.box{width:min(420px,calc(100% - 40px));border:1px solid #29323b;padding:40px;text-align:center;background:#0e1319}.mark{display:grid;place-items:center;margin:auto;width:50px;height:50px;background:#ffc62e;color:#111;font-weight:900;font-size:27px}.loader{height:2px;background:#252c33;margin:28px 0;overflow:hidden}.loader i{display:block;height:100%;width:45%;background:#ffc62e;animation:load 1.2s infinite}@keyframes load{to{transform:translateX(230%)}}p{color:#8f9aa3;font-size:14px}a{color:#ffc62e}</style></head><body><main class="box"><div class="mark">D</div><h1>正在安全跳转</h1><p id="message">正在验证目标地址，请稍候。</p><div class="loader"><i></i></div><a href="index.html">返回大佬云首页</a></main><script src="go-targets.js"></script><script>(()=>{const targets=window.GO_TARGETS||{};const params=new URLSearchParams(location.search);const key=params.get('target');const campaign=params.get('id');const url=(campaign&&targets[campaign])||targets[key]||(key==='go'||!key?targets['dalao']:null);if(!url){document.querySelector('#message').textContent='目标地址无效或不在安全白名单中。';document.querySelector('.loader').hidden=true;return}setTimeout(()=>location.replace(url),700)})();</script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<title>正在安全跳转｜大佬云</title>
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#080b0f;color:#eef2f4;font-family:system-ui,"Microsoft YaHei",sans-serif}
+.box{width:min(420px,calc(100% - 40px));border:1px solid #29323b;padding:40px;text-align:center;background:#0e1319;border-radius:4px}
+.mark{display:grid;place-items:center;margin:auto;width:50px;height:50px;background:#ffc62e;color:#111;font-weight:900;font-size:27px}
+.loader{height:2px;background:#252c33;margin:28px 0;overflow:hidden}
+.loader i{display:block;height:100%;width:45%;background:#ffc62e;animation:load 1.2s infinite}
+@keyframes load{to{transform:translateX(230%)}}
+p{color:#8f9aa3;font-size:14px;line-height:1.6}
+a{color:#ffc62e;text-decoration:none}
+a:hover{text-decoration:underline}
+.action-box{margin-top:20px}
+</style>
+</head>
+<body>
+<main class="box">
+  <div class="mark">D</div>
+  <h1>正在安全跳转</h1>
+  <p id="message">正在验证目标安全白名单，请稍候...</p>
+  <div class="loader" id="loader"><i></i></div>
+  <div class="action-box">
+    <a id="action-link" href="/" rel="nofollow sponsored noopener noreferrer">返回大佬云首页</a>
+  </div>
+</main>
+<script src="go-targets.js"></script>
+<script>
+(()=>{
+  let redirected = false;
+  function jump(destination) {
+    if (redirected) return;
+    redirected = true;
+    try {
+      window.location.replace(destination);
+    } catch (e) {
+      window.location.href = destination;
+    }
+  }
 
+  const targets = window.GO_TARGETS || {};
+  const params = new URLSearchParams(window.location.search);
+  const rawKey = (params.get('target') || params.get('id') || '').trim();
+  const key = rawKey.toLowerCase();
 
+  // 解析目标地址（默认为主推品牌 dalao）
+  let targetUrl = '';
+  if (!key || key === 'dalao' || key === 'go') {
+    targetUrl = targets['dalao'] || '';
+  } else if (targets[key]) {
+    targetUrl = targets[key];
+  } else if (targets[rawKey]) {
+    targetUrl = targets[rawKey];
+  }
+
+  const message = document.getElementById('message');
+  const actionLink = document.getElementById('action-link');
+  const loader = document.getElementById('loader');
+
+  // 严格校验是否为合规的绝对 HTTP(S) 地址，杜绝相对路径回环或开放重定向
+  const isValidUrl = typeof targetUrl === 'string' && /^https?:\/\//i.test(targetUrl);
+
+  if (isValidUrl) {
+    if (actionLink) {
+      actionLink.href = targetUrl;
+      actionLink.setAttribute('rel', 'nofollow sponsored noopener noreferrer');
+      actionLink.setAttribute('target', '_blank');
+      actionLink.textContent = '若未自动跳转，请点击此处 ↗';
+    }
+    // 立即执行替换跳转，防多次调用
+    jump(targetUrl);
+  } else {
+    // 异常与未命中回退：重定向至首页 '/' 并终止，绝不重定向回 /go 形成循环
+    if (loader) loader.style.display = 'none';
+    if (message) message.textContent = '目标地址未找到或不在安全白名单中，正在返回首页...';
+    if (actionLink) {
+      actionLink.href = '/';
+      actionLink.removeAttribute('rel');
+      actionLink.removeAttribute('target');
+      actionLink.textContent = '立即返回大佬云首页 →';
+    }
+    setTimeout(() => {
+      jump('/');
+    }, 1200);
+  }
+})();
+</script>
+</body>
+</html>
