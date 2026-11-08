@@ -5,6 +5,30 @@ topology:{category:'专线拓扑',label:'专线拓扑与骨干网络',intro:'网
 protocols:{category:'协议科普',label:'协议演进与通信防线',intro:'协议解决的是流量表达、握手与转发问题，线路解决的是容量、拥塞与路由问题。把二者混为一谈，是免费机场和一元机场营销中最常见的认知陷阱。'},
 'ip-audit':{category:'IP风控',label:'出海风控与 IP 属性审计',intro:'海外平台判断风险时会组合 ASN、IP 类型、地理位置、切换频率、DNS、WebRTC 与账户行为。所谓能打开网页，并不等于出口适合 AI、支付或跨境店铺。'}
 };
+
+const customArticles = [
+  {
+    id: 1,
+    group: 'economy',
+    category: '低价剖析',
+    label: '低价生态与经济模型',
+    slug: 'iepl-stable-airport-recommendation-guide',
+    title: '2026年IEPL专线机场推荐：告别晚高峰断连与4K缓冲，高稳定性科学上网梯子实测选购指南',
+    keyword: 'IEPL专线机场推荐',
+    path: 'src/content/wiki/economy/iepl-stable-airport-recommendation-guide.md'
+  },
+  {
+    id: 2,
+    group: 'economy',
+    category: '低价剖析',
+    label: '低价生态与经济模型',
+    slug: 'budget-affordable-airport-recommendation-guide',
+    title: '2026年平价高性价比机场推荐：学生党与轻度用户如何选好梯子？避坑指南与实测解析',
+    keyword: '平价高性价比机场推荐',
+    path: 'src/content/wiki/economy/budget-affordable-airport-recommendation-guide.md'
+  }
+];
+
 const A=[
 ['economy','1-yuan-airport-traffic-overselling-math','一元机场背后的带宽精算与超售模型：为什么几元包月的梯子必然走向晚高峰瘫痪？','一元机场','千兆端口成本、1:50 至 1:100 超售比与晚高峰排队','端口利用率、并发率和每用户保障带宽'],
 ['economy','free-airport-nodes-middleman-sniffing','免费机场节点的安全代价剖析：公共代理抓包嗅探、暗网流量注入与隐私泄露全景','免费机场','明文抓包、中间人流量注入与共享出口连带风险','证书异常、DNS 路径和客户端来源'],
@@ -29,7 +53,14 @@ const A=[
 ];
 const esc=s=>s.replace(/"/g,'\\"');
 function desc(a){let s=`${a[2]} 本文围绕${a[3]}，从${a[4]}展开可复现实测，给出${a[5]}的判断方法，并对比一元机场、免费机场与赔钱机场风险，形成可执行的机场推荐和梯子推荐标准。`;while(s.length<142)s+='帮助读者在晚高峰、隐私安全与长期成本之间完成理性选择。';return s.slice(0,155)}
-function article(a,i){const [g,slug,title,term,focus,metrics]=a,c=groups[g],next=A[(i+1)%A.length],prev=A[(i+A.length-1)%A.length];return `---
+function article(a,i){const [g,slug,title,term,focus,metrics]=a,c=groups[g];
+// 前后跳转链接计算
+const allList = [...customArticles.map(x=>[x.group,x.slug,x.title]), ...A.map(x=>[x[0],x[1],x[2]])];
+const curIdx = customArticles.length + i;
+const next = allList[(curIdx + 1) % allList.length];
+const prev = allList[(curIdx + allList.length - 1) % allList.length];
+
+return `---
 title: "${esc(title)}"
 description: "${esc(desc(a))}"
 date: "2026-11-04"
@@ -120,7 +151,32 @@ Speedtest 常使用多连接并选择邻近服务器，会绕开单连接窗口�
 
 共同标准是可验证：线路类型能通过路由与高峰表现交叉确认，协议与客户端来源透明，出口 ASN 和地理属性稳定，计费能够前后核对，商业上允许小额月付。任何单项都不能代替完整的端到端证据链。
 `}
-for(const [i,a] of A.entries()){const dir=path.join(root,'src','content','wiki',a[0]);fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(path.join(dir,`${a[1]}.md`),article(a,i));}
-fs.writeFileSync(path.join(root,'src','data','wiki-articles.json'),JSON.stringify(A.map((a,i)=>({id:i+1,group:a[0],category:groups[a[0]].category,label:groups[a[0]].label,slug:a[1],title:a[2],keyword:a[3],path:`src/content/wiki/${a[0]}/${a[1]}.md`})),null,2));
-console.log(`Generated ${A.length} wiki articles in ${Object.keys(groups).length} categories.`);
 
+// 确保目录存在
+for(const g of Object.keys(groups)){
+  fs.mkdirSync(path.join(root,'src','content','wiki',g),{recursive:true});
+}
+
+// 写入常规模板文章（如果非自定义）
+for(const [i,a] of A.entries()){
+  const targetPath = path.join(root,'src','content','wiki',a[0],`${a[1]}.md`);
+  fs.writeFileSync(targetPath, article(a,i));
+}
+
+// 组合全部文章元数据：先放2篇新增高质量SEO长文，再放原本的20篇
+const finalArticles = [
+  ...customArticles,
+  ...A.map((a,i)=>({
+    id: customArticles.length + i + 1,
+    group: a[0],
+    category: groups[a[0]].category,
+    label: groups[a[0]].label,
+    slug: a[1],
+    title: a[2],
+    keyword: a[3],
+    path: `src/content/wiki/${a[0]}/${a[1]}.md`
+  }))
+];
+
+fs.writeFileSync(path.join(root,'src','data','wiki-articles.json'),JSON.stringify(finalArticles,null,2));
+console.log(`Generated wiki articles catalog: ${finalArticles.length} articles (${customArticles.length} custom, ${A.length} standard) in ${Object.keys(groups).length} categories.`);

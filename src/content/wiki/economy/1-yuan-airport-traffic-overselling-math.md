@@ -73,7 +73,7 @@ curl -L --range 0-52428799 -o /dev/null -w 'speed=%{speed_download}
 
 ## 延伸阅读与集群内链
 
-- 上一篇：[2026 稳定机场推荐与梯子选型终极方法论：以大佬云架构为蓝本的四维立体评估模型](../ip-audit/comprehensive-airport-evaluation-methodology.md)
+- 上一篇：[2026年平价高性价比机场推荐：学生党与轻度用户如何选好梯子？避坑指南与实测解析](../economy/budget-affordable-airport-recommendation-guide.md)
 - 下一篇：[免费机场节点的安全代价剖析：公共代理抓包嗅探、暗网流量注入与隐私泄露全景](../economy/free-airport-nodes-middleman-sniffing.md)
 - 配套指南：[客户端配置](/tutorials/) · [AI 出海导航](/ai/) · [大佬云新手 FAQ](/pitfalls/)
 

@@ -4,13 +4,33 @@
     "group": "economy",
     "category": "低价剖析",
     "label": "低价生态与经济模型",
+    "slug": "iepl-stable-airport-recommendation-guide",
+    "title": "2026年IEPL专线机场推荐：告别晚高峰断连与4K缓冲，高稳定性科学上网梯子实测选购指南",
+    "keyword": "IEPL专线机场推荐",
+    "path": "src/content/wiki/economy/iepl-stable-airport-recommendation-guide.md"
+  },
+  {
+    "id": 2,
+    "group": "economy",
+    "category": "低价剖析",
+    "label": "低价生态与经济模型",
+    "slug": "budget-affordable-airport-recommendation-guide",
+    "title": "2026年平价高性价比机场推荐：学生党与轻度用户如何选好梯子？避坑指南与实测解析",
+    "keyword": "平价高性价比机场推荐",
+    "path": "src/content/wiki/economy/budget-affordable-airport-recommendation-guide.md"
+  },
+  {
+    "id": 3,
+    "group": "economy",
+    "category": "低价剖析",
+    "label": "低价生态与经济模型",
     "slug": "1-yuan-airport-traffic-overselling-math",
     "title": "一元机场背后的带宽精算与超售模型：为什么几元包月的梯子必然走向晚高峰瘫痪？",
     "keyword": "一元机场",
     "path": "src/content/wiki/economy/1-yuan-airport-traffic-overselling-math.md"
   },
   {
-    "id": 2,
+    "id": 4,
     "group": "economy",
     "category": "低价剖析",
     "label": "低价生态与经济模型",
@@ -20,7 +40,7 @@
     "path": "src/content/wiki/economy/free-airport-nodes-middleman-sniffing.md"
   },
   {
-    "id": 3,
+    "id": 5,
     "group": "economy",
     "category": "低价剖析",
     "label": "低价生态与经济模型",
@@ -30,7 +50,7 @@
     "path": "src/content/wiki/economy/losing-money-airport-ponzi-cycle-warning.md"
   },
   {
-    "id": 4,
+    "id": 6,
     "group": "economy",
     "category": "低价剖析",
     "label": "低价生态与经济模型",
@@ -40,7 +60,7 @@
     "path": "src/content/wiki/economy/billing-multipliers-vs-true-1-to-1-traffic.md"
   },
   {
-    "id": 5,
+    "id": 7,
     "group": "economy",
     "category": "低价剖析",
     "label": "低价生态与经济模型",
@@ -50,7 +70,7 @@
     "path": "src/content/wiki/economy/small-monthly-payment-defense-line.md"
   },
   {
-    "id": 6,
+    "id": 8,
     "group": "topology",
     "category": "专线拓扑",
     "label": "专线拓扑与骨干网络",
@@ -60,7 +80,7 @@
     "path": "src/content/wiki/topology/iepl-vs-iplc-vs-bgp-transit-architecture.md"
   },
   {
-    "id": 7,
+    "id": 9,
     "group": "topology",
     "category": "专线拓扑",
     "label": "专线拓扑与骨干网络",
@@ -70,7 +90,7 @@
     "path": "src/content/wiki/topology/qos-traffic-shaping-peak-hour-lag.md"
   },
   {
-    "id": 8,
+    "id": 10,
     "group": "topology",
     "category": "专线拓扑",
     "label": "专线拓扑与骨干网络",
@@ -80,7 +100,7 @@
     "path": "src/content/wiki/topology/bdp-single-thread-vs-speedtest-illusion.md"
   },
   {
-    "id": 9,
+    "id": 11,
     "group": "topology",
     "category": "专线拓扑",
     "label": "专线拓扑与骨干网络",
@@ -90,7 +110,7 @@
     "path": "src/content/wiki/topology/icmp-fake-ping-vs-tcp-handshake-delay.md"
   },
   {
-    "id": 10,
+    "id": 12,
     "group": "topology",
     "category": "专线拓扑",
     "label": "专线拓扑与骨干网络",
@@ -100,7 +120,7 @@
     "path": "src/content/wiki/topology/automated-probe-radar-failover-design.md"
   },
   {
-    "id": 11,
+    "id": 13,
     "group": "protocols",
     "category": "协议科普",
     "label": "协议演进与通信防线",
@@ -110,7 +130,7 @@
     "path": "src/content/wiki/protocols/vless-reality-vision-eliminated-sni-blocking.md"
   },
   {
-    "id": 12,
+    "id": 14,
     "group": "protocols",
     "category": "协议科普",
     "label": "协议演进与通信防线",
@@ -120,7 +140,7 @@
     "path": "src/content/wiki/protocols/vmess-trojan-vs-reality-generational-shift.md"
   },
   {
-    "id": 13,
+    "id": 15,
     "group": "protocols",
     "category": "协议科普",
     "label": "协议演进与通信防线",
@@ -130,7 +150,7 @@
     "path": "src/content/wiki/protocols/quic-hysteria2-tuic-udp-acceleration-limits.md"
   },
   {
-    "id": 14,
+    "id": 16,
     "group": "protocols",
     "category": "协议科普",
     "label": "协议演进与通信防线",
@@ -140,7 +160,7 @@
     "path": "src/content/wiki/protocols/dns-leak-prevention-doh-fake-ip.md"
   },
   {
-    "id": 15,
+    "id": 17,
     "group": "protocols",
     "category": "协议科普",
     "label": "协议演进与通信防线",
@@ -150,7 +170,7 @@
     "path": "src/content/wiki/protocols/tun-virtual-adapter-vs-socket-proxy.md"
   },
   {
-    "id": 16,
+    "id": 18,
     "group": "ip-audit",
     "category": "IP风控",
     "label": "出海风控与 IP 属性审计",
@@ -160,7 +180,7 @@
     "path": "src/content/wiki/ip-audit/asn-datacenter-vs-dual-isp-residential-ip.md"
   },
   {
-    "id": 17,
+    "id": 19,
     "group": "ip-audit",
     "category": "IP风控",
     "label": "出海风控与 IP 属性审计",
@@ -170,7 +190,7 @@
     "path": "src/content/wiki/ip-audit/chatgpt-claude-error-1020-ip-trust-chain.md"
   },
   {
-    "id": 18,
+    "id": 20,
     "group": "ip-audit",
     "category": "IP风控",
     "label": "出海风控与 IP 属性审计",
@@ -180,7 +200,7 @@
     "path": "src/content/wiki/ip-audit/tiktok-shop-multi-account-ip-isolation.md"
   },
   {
-    "id": 19,
+    "id": 21,
     "group": "ip-audit",
     "category": "IP风控",
     "label": "出海风控与 IP 属性审计",
@@ -190,7 +210,7 @@
     "path": "src/content/wiki/ip-audit/webrtc-ip-leak-inspection-wireshark.md"
   },
   {
-    "id": 20,
+    "id": 22,
     "group": "ip-audit",
     "category": "IP风控",
     "label": "出海风控与 IP 属性审计",

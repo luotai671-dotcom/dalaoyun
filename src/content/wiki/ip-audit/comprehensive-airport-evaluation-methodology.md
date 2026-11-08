@@ -74,7 +74,7 @@ curl -L --range 0-52428799 -o /dev/null -w 'speed=%{speed_download}
 ## 延伸阅读与集群内链
 
 - 上一篇：[浏览器端底层漏洞审查：WebRTC 本地私有与公网 IPv6 真实穿透泄露的抓包复现与修复](../ip-audit/webrtc-ip-leak-inspection-wireshark.md)
-- 下一篇：[一元机场背后的带宽精算与超售模型：为什么几元包月的梯子必然走向晚高峰瘫痪？](../economy/1-yuan-airport-traffic-overselling-math.md)
+- 下一篇：[2026年IEPL专线机场推荐：告别晚高峰断连与4K缓冲，高稳定性科学上网梯子实测选购指南](../economy/iepl-stable-airport-recommendation-guide.md)
 - 配套指南：[客户端配置](/tutorials/) · [AI 出海导航](/ai/) · [大佬云新手 FAQ](/pitfalls/)
 
 ## 长尾 FAQ
