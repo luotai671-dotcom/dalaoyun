@@ -1,6 +1,6 @@
 # Static hosting rules (Cloudflare Pages / Netlify)
 # BEGIN MANAGED AFF LINKS
-/go/dalao https://chenpin01.dalaoyunaff.com/#/?code=GQ6CL6Km 301
+/go/dalao https://chenpin01.dalaoyunaff.com/#/?code=GQ6CL6Km 302
 # END MANAGED AFF LINKS
 
 /advantages/ /features.html 200
