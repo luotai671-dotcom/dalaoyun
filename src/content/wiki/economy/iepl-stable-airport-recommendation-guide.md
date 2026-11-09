@@ -193,14 +193,14 @@ nexttrace --tcp -p 443 1.1.1.1
 3. 行业内的云界线与闪电鼠等中转或专线产品可作为网络横向技术对照参考；
 4. 若您是预算紧张的学生党或轻度偶尔查资料用户，请继续研读我们的姊妹篇指南[2026年平价高性价比机场推荐与新手避坑指南](../economy/budget-affordable-airport-recommendation-guide.md)，了解如何在几十元预算内安全选型。
 
-同时可交叉参考站内权威文档：[专线拓扑优势](/features.html)、[套餐价格对比](/pricing/)与[4K晚高峰测速大表](/benchmark/)。
+同时可交叉参考站内权威文档：[专线拓扑优势](/features)、[套餐价格对比](/pricing)与[4K晚高峰测速大表](/speedtest)。
 
 ## 延伸阅读与集群内链
 
 - 同集群推荐：[2026年平价高性价比机场推荐：学生党与轻度用户如何选好梯子？避坑指南与实测解析](../economy/budget-affordable-airport-recommendation-guide.md)
 - 底层技术解密：[一元机场背后的带宽精算与超售模型：为什么几元包月的梯子必然走向晚高峰瘫痪？](../economy/1-yuan-airport-traffic-overselling-math.md)
 - 拓扑进阶对比：[从物理海缆到二层切片：IEPL、IPLC 与 BGP 公网中转专线拓扑全景技术对比指南](../topology/iepl-vs-iplc-vs-bgp-transit-architecture.md)
-- 避坑实用问答：[大佬云新手避坑 65 问手册](/pitfalls/)
+- 避坑实用问答：[大佬云新手避坑 65 问手册](/faq)
 
 ## 长尾 FAQ
 

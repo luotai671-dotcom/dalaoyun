@@ -3,11 +3,12 @@
 /go/dalao https://chenpin01.dalaoyunaff.com/#/?code=GQ6CL6Km 302
 # END MANAGED AFF LINKS
 
-/advantages/ /features.html 200
-/pricing/ /pricing.html 200
-/benchmark/ /speedtest.html 200
-/ai/ /ai-tools.html 200
-/tutorials/ /tutorials.html 200
-/pitfalls/ /faq.html 200
-/wiki/ /wiki.html 200
+/advantages /features 301
+/advantages/ /features 301
+/benchmark /speedtest 301
+/benchmark/ /speedtest 301
+/ai /ai-tools 301
+/ai/ /ai-tools 301
+/pitfalls /faq 301
+/pitfalls/ /faq 301
 /* /404.html 404

@@ -4,14 +4,14 @@ const rawSiteUrl=(process.env.SITE_URL||'https://dalaoyungw.com').trim();
 let origin;
 try{origin=new URL(rawSiteUrl).origin}catch{console.error(`Invalid SITE_URL: ${rawSiteUrl}`);process.exit(1)}
 const routes=[
-  '/', '/advantages/', '/pricing/', '/benchmark/', '/ai/', '/tutorials/', '/pitfalls/', '/wiki/'
+  '/', '/features', '/pricing', '/speedtest', '/ai-tools', '/tutorials', '/faq', '/wiki'
 ];
 const wikiRoot=path.join(root,'wiki');
 if(fs.existsSync(wikiRoot))for(const group of fs.readdirSync(wikiRoot)){
   const groupDir=path.join(wikiRoot,group);
   if(!fs.statSync(groupDir).isDirectory())continue;
   for(const file of fs.readdirSync(groupDir).filter(name=>name.endsWith('.html'))){
-    routes.push(`/wiki/${group}/${file}`);
+    routes.push(`/wiki/${group}/${file.replace(/\.html$/, '')}`);
   }
 }
 const lastmod=new Date().toISOString().slice(0,10);

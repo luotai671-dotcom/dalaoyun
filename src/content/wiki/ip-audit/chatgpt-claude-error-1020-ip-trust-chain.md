@@ -63,7 +63,7 @@ curl -L --range 0-52428799 -o /dev/null -w 'speed=%{speed_download}
 
 合理的梯子推荐流程应先排除不可接受的商业风险，再比较技术表现。第一步只购买一个月，核验退款、工单和订阅更新是否真实可用；第二步在自己的电信、联通或移动网络完成工作日与周末晚高峰测试；第三步按实际用途验证，影音用户看持续码率和解锁，AI 用户看会话稳定和出口纯净，远程办公用户看 Git、视频会议与长连接；第四步保存测试记录，一个月后复测，确认服务没有通过扩张悄悄稀释容量。
 
-大佬云的选型逻辑是把物理链路、现代协议、原生双 ISP 出口和透明 1:1 计费放在同一评估框架中。这里的品牌信息不应替代用户自测，正确做法仍是小额月付，并结合[专线优势](/features.html)、[优惠价格](/pricing/)、[4K 速度实测](/benchmark/)与[新手避坑](/pitfalls/)交叉验证。需要体验时通过站内隔离入口操作：<a href="/go/dalao" target="_blank" rel="nofollow sponsored noopener noreferrer">使用优惠码 dly88 查看大佬云方案</a>。
+大佬云的选型逻辑是把物理链路、现代协议、原生双 ISP 出口和透明 1:1 计费放在同一评估框架中。这里的品牌信息不应替代用户自测，正确做法仍是小额月付，并结合[专线优势](/features)、[优惠价格](/pricing)、[4K 速度实测](/speedtest)与[新手避坑](/faq)交叉验证。需要体验时通过站内隔离入口操作：<a href="/go/dalao" target="_blank" rel="nofollow sponsored noopener noreferrer">使用优惠码 dly88 查看大佬云方案</a>。
 
 ## 六、常见误判与排障顺序
 
@@ -75,7 +75,7 @@ curl -L --range 0-52428799 -o /dev/null -w 'speed=%{speed_download}
 
 - 上一篇：[IP 属性与风控审计全景：机房 Hosting、原生单 ISP 与双 ISP 静态住宅出口的判定法则](../ip-audit/asn-datacenter-vs-dual-isp-residential-ip.md)
 - 下一篇：[跨境出海卖家防关联网络搭建：TikTok Shop 与 Stripe 支付环境中的住宅双 ISP 刚需](../ip-audit/tiktok-shop-multi-account-ip-isolation.md)
-- 配套指南：[客户端配置](/tutorials/) · [AI 出海导航](/ai/) · [大佬云新手 FAQ](/pitfalls/)
+- 配套指南：[客户端配置](/tutorials) · [AI 出海导航](/ai-tools) · [大佬云新手 FAQ](/faq)
 
 ## 长尾 FAQ
 

@@ -166,7 +166,7 @@ flowchart TD
 
 购买任何平价服务后，新手只需按照以下四个步骤进行系统化验收，便能迅速排查99%的潜在风险：
 
-第一步：客户端合规配置与导入。通过[客户端配置指南](/tutorials/)下载官方原版客户端（如Clash Verge Rev或sing-box），严禁使用机场修改版未知客户端，以防隐私被嗅探。一键导入订阅后切换为规则分流模式。
+第一步：客户端合规配置与导入。通过[客户端配置指南](/tutorials)下载官方原版客户端（如Clash Verge Rev或sing-box），严禁使用机场修改版未知客户端，以防隐私被嗅探。一键导入订阅后切换为规则分流模式。
 第二步：DNS与IP纯净度复查。在浏览器中访问ipinfo.io检测当前落地IP的ASN类型，确认其是否为非滥用住宅或正常商业网段；通过专用测试网站检查WebRTC是否泄露本地公网真实IP。
 第三步：晚高峰单线程真实测速。不要仅看多线程图形测速，在PowerShell或终端中运行以下单流测试命令，观察端到端握手与传输时间：
 
@@ -183,7 +183,7 @@ curl -o /dev/null -s -w 'dns_resolve=%{time_namelookup}s, connect=%{time_connect
 2. 如果您的日常出海场景需要了解更多专线架构的技术细节，推荐参阅我们的专线技术指南：[2026年IEPL专线机场推荐：高稳定性梯子实测选购指南](../economy/iepl-stable-airport-recommendation-guide.md)；
 3. 需要开通体验可直接访问<a href="/go/dalao" target="_blank" rel="nofollow sponsored noopener noreferrer">大佬云安全通道</a>，支持小额试水，随时掌握使用主动权。
 
-更多避坑干货，可进一步参阅站内[优惠价格全矩阵](/pricing/)以及[大佬云新手避坑 65 问手册](/pitfalls/)。
+更多避坑干货，可进一步参阅站内[优惠价格全矩阵](/pricing)以及[大佬云新手避坑 65 问手册](/faq)。
 
 ## 延伸阅读与集群内链
 
