@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+User-agent: bingbot
+Allow: /
+
 Sitemap: https://dalaoyungw.com/sitemap.xml

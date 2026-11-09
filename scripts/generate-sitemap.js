@@ -17,5 +17,5 @@ if(fs.existsSync(wikiRoot))for(const group of fs.readdirSync(wikiRoot)){
 const lastmod=new Date().toISOString().slice(0,10);
 const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.map(route=>`  <url><loc>${origin}${route}</loc><lastmod>${lastmod}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(root,'sitemap.xml'),xml);
-fs.writeFileSync(path.join(root,'robots.txt'),`User-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`);
+fs.writeFileSync(path.join(root,'robots.txt'),`User-agent: *\nAllow: /\n\nUser-agent: bingbot\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`);
 console.log(`Generated sitemap.xml with ${routes.length} URLs for ${origin}.`);
